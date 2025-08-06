@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dark Form PT</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel+Decorative:wght@400;700&family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background-color: #0a0a0a;
       color: #e0e0e0;
-      font-family: 'UnifrakturCook', cursive;
+      font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,6 +23,7 @@
     }
 
     h1 {
+      font-family: 'UnifrakturCook', cursive;
       font-size: 52px;
       margin: 0;
       color: #fff;
@@ -32,7 +33,7 @@
     p.tagline {
       font-size: 20px;
       color: #bbb;
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin-top: 10px;
     }
 
@@ -44,13 +45,14 @@
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     h2 {
       font-size: 30px;
       margin-bottom: 20px;
       color: #ccc;
+      font-family: 'Cinzel Decorative', cursive;
     }
 
     ul {
@@ -64,25 +66,36 @@
       color: #aaa;
     }
 
-    form {
+    .cta-button {
+      display: inline-block;
       margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      width: 100%;
-      max-width: 400px;
-      border: none;
-      border-radius: 4px;
-      background: #1e1e1e;
+      padding: 12px 25px;
+      font-size: 18px;
       color: #fff;
+      background-color: #111;
+      border: 2px solid #444;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
     }
 
-    button {
+    .cta-button:hover {
+      background-color: #222;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #1c1c1c;
+      border: 1px solid #444;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+    }
+
+    button[type="submit"] {
+      margin-top: 20px;
       padding: 12px 25px;
       font-size: 18px;
       color: #fff;
@@ -90,10 +103,9 @@
       border: 2px solid #444;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
 
-    button:hover {
+    button[type="submit"]:hover {
       background-color: #222;
     }
 
@@ -101,7 +113,7 @@
       margin-top: 50px;
       font-size: 14px;
       color: #666;
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
   </style>
 </head>
@@ -112,9 +124,9 @@
   </header>
 
   <section class="offer">
-    <h2>Achieve Your Final Form</h2>
+    <h2><b>Achieve</b> <i>Your</i> <b>Final</b> <i>Form</i></h2>
     <p>
-      In just 3 months, I will personally train you at your home — 3x a week — to build a body that gets noticed.
+      In just <strong>3 months</strong>, I will personally train you at your home — 3x a week — to build a body that gets noticed.
     </p>
     <ul>
       <li>• No gyms. No excuses. Your home becomes your transformation ground.</li>
@@ -127,11 +139,11 @@
     <p><strong>£1000 for the full 3-month transformation</strong></p>
     <p><em>This is for people who understand the power of money and appearance. You will stand out, because nothing looks better than control.</em></p>
 
-    <form name="apply" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="apply">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="goals" placeholder="Tell me your goals (optional)"></textarea>
+      <textarea name="goal" placeholder="What do you want?" required></textarea>
       <button type="submit">Apply Now</button>
     </form>
   </section>
